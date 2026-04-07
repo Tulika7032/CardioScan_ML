@@ -1,27 +1,29 @@
 # 🫀 CardioScan — Heart Disease Prediction System
 
-An end-to-end Machine Learning project that predicts the likelihood of heart disease using clinical data, with a production-ready pipeline and an interactive Streamlit web application.
+An end-to-end Machine Learning project that predicts the likelihood of heart disease using patient clinical data, featuring a modular training pipeline, rigorous model evaluation, and an interactive Streamlit application for real-time risk assessment.
+
+The system enables early risk identification by providing probability-based predictions, helping demonstrate how ML can support data-driven decision-making in healthcare scenarios.
 
 ---
 
 ## Project Overview
 
-CardioScan demonstrates the complete ML lifecycle:
-- Data preprocessing  
-- Model training & evaluation  
-- Best model selection  
-- Deployment via web interface  
+CardioScan demonstrates the complete **ML lifecycle**:
+- **Data preprocessing**  
+- **Model training & evaluation**  
+- **Best model selection**  
+- **Deployment via web interface**  
 
 ---
 
 ##  Key Highlights
 
 - Built a **modular ML pipeline**
-- Trained multiple models:
+- **Trained multiple models:**
   - Random Forest
   - Logistic Regression
-- Selected best model using **F1-score**
-- Implemented full evaluation:
+- **Selected best model using F1-score**
+- **Implemented full evaluation:**
   - Accuracy, Precision, Recall, F1, ROC-AUC
 - Developed an interactive **Streamlit dashboard**
   
@@ -30,22 +32,22 @@ CardioScan demonstrates the complete ML lifecycle:
 ## Tech Stack
 
 **Languages & Libraries**
-- Python
-- NumPy, Pandas
-- Scikit-learn
-- Joblib
+- **Python**
+- **NumPy, Pandas**
+- **Scikit-learn**
+- **Joblib**
 
 **Frontend / App**
-- Streamlit
+- **Streamlit**
 
 ---
 
 ## Machine Learning Workflow
 
 ### 1. Data Preprocessing
-- Load dataset
-- Split into features and target
-- Train-test split (80/20)
+- **Load dataset**
+- **Split into features and target**
+- **Train-test split (80/20)**
 
 ### 2. Model Training
 **- Pipeline:**
@@ -101,9 +103,9 @@ streamlit run app.py
 --- 
 
 ## Application Features
-- Interactive patient input panel  
-- Real-time health metrics visualization  
-- ML-based heart disease risk prediction  
-- Probability-based risk scoring  
-- Clean and intuitive Streamlit UI  
+- **Interactive patient input panel**  
+- **Real-time health metrics visualization**  
+- **ML-based heart disease risk prediction**  
+- **Probability-based risk scoring**  
+- **Clean and intuitive Streamlit UI**  
 
