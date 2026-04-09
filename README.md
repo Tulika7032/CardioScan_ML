@@ -1,6 +1,6 @@
 # 🫀 CardioScan — Heart Disease Prediction System
 
-An end-to-end Machine Learning project that predicts the likelihood of heart disease using patient clinical data, featuring a modular training pipeline, rigorous model evaluation, and an interactive Streamlit application for real-time risk assessment.
+An **end-to-end Machine Learning project** that predicts the **likelihood** of **heart disease** using **patient clinical data**, featuring a modular training pipeline, rigorous model evaluation, and an interactive Streamlit application for real-time risk assessment.
 
 The system enables early risk identification by providing probability-based predictions, helping demonstrate how ML can support data-driven decision-making in healthcare scenarios.
 
