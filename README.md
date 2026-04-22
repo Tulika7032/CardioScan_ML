@@ -1,18 +1,21 @@
 # 🫀 CardioScan — Heart Disease Prediction System
 
-An **end-to-end Machine Learning project** that predicts the **likelihood** of **heart disease** using **patient clinical data**, featuring a **modular training pipeline**, rigorous **model evaluation**, and an **interactive Streamlit application** for **real-time risk assessment.**
+CardioScan is an **end-to-end machine learning project** that predicts the **likelihood of heart disease using patient clinical data.**
 
-The system enables early **risk identification** by providing **probability-based predictions**, helping demonstrate how ML can support **data-driven decision-making** in **healthcare scenarios.**
+The project demonstrates the **complete ML workflow — from data preprocessing and model training to evaluation and deployment through an interactive Streamlit application.**
+
+It focuses on building a practical system for **risk prediction while showcasing core machine learning concepts.**
 
 ---
 
 ## Project Overview
 
 CardioScan demonstrates the complete **ML lifecycle**:
-- **Data preprocessing**  
-- **Model training & evaluation**  
-- **Best model selection**  
-- **Deployment via web interface**  
+- **Data preprocessing and feature preparation**  
+- **Training multiple classification models**
+- **Evaluating models using standard metrics**
+- **Selecting the best-performing model**  
+- **Deploying the model via a Streamlit web application**  
 
 ---
 
@@ -114,5 +117,9 @@ streamlit run app.py
 - **Real-time health metrics visualization**  
 - **ML-based heart disease risk prediction**  
 - **Probability-based risk scoring**  
-- **Clean and intuitive Streamlit UI**  
+- **Clean and intuitive Streamlit UI**
+
+## Note
+This project is inspired by a machine learning course.
+The implementation, structure, and enhancements are done independently for learning and portfolio purposes.
 
