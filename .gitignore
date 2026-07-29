@@ -1,18 +1,25 @@
-
-# Virtual environment
+# Python
+__pycache__/
+*.pyc
 .venv/
 venv/
 
-# Python cache
-__pycache__/
-*.pyc
+#Virtualenv
+venv/
 
-# Jupyter
-.ipynb_checkpoints/
+# Models
+models/
 
-# Model files
-*.pkl
+# Reports (optional)
+reports/
 
-# OS files
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
 .DS_Store
 Thumbs.db

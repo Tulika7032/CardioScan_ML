@@ -1,19 +1,26 @@
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline 
-from sklearn.preprocessing import StandardScaler
+from src.tune import tune_random_forest, tune_logistic_regression
 import joblib
 
 def train_model(X_train, y_train):
-    pipelines = {
-        "random_forest": Pipeline([("scalar", StandardScaler()), ("model",RandomForestClassifier(n_estimators=100, random_state=42))]),
-        "logistic_regression": Pipeline([("scalar", StandardScaler()), ("model", LogisticRegression(max_iter=1000, random_state=42))])
-    }
+
     trained_models = {}
 
-    for name, model in pipelines.items():
-        model.fit(X_train, y_train)
-        trained_models[name] = model
+    rf_model, rf_params, rf_score = tune_random_forest(
+        X_train,
+        y_train
+    )
+
+    lr_model, lr_params, lr_score = tune_logistic_regression(
+        X_train,
+        y_train
+    )
+
+    trained_models["random_forest"] = rf_model
+    trained_models["logistic_regression"] = lr_model
+
+    print("RF Params:", rf_params)
+    print("LR Params:", lr_params)
+
     return trained_models
 
 

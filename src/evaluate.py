@@ -1,5 +1,9 @@
-from sklearn.metrics import accuracy_score, precision_score, f1_score, recall_score, roc_auc_score
+import os
+
+from sklearn import metrics
+from sklearn.metrics import PrecisionRecallDisplay, RocCurveDisplay, accuracy_score, precision_score, f1_score, recall_score, roc_auc_score
 from sklearn.metrics import classification_report, confusion_matrix
+
 def evaluate_model(model, X_test, y_test):
 
     y_preds=model.predict(X_test)
@@ -7,47 +11,31 @@ def evaluate_model(model, X_test, y_test):
 
     metrics={}
 
-    def accuracy(y_test, y_preds):
-        model_accuracy=accuracy_score(y_test, y_preds)
-        print("Model accuracy: ", model_accuracy)
-        metrics["accuracy"] = model_accuracy
+    metrics["accuracy"] = accuracy_score(y_test, y_preds)
+    metrics["precision"] = precision_score(y_test, y_preds)
+    metrics["recall"] = recall_score(y_test, y_preds)
+    metrics["f1"] = f1_score(y_test, y_preds)
+    metrics["roc_auc"] = roc_auc_score(y_test, y_probs)
 
-    def precision(y_test, y_preds):
-        model_precision=precision_score(y_test, y_preds)
-        print("Precision score: ", model_precision)
-        metrics["precision"] = model_precision
+    metrics["confusion_matrix"] = confusion_matrix(y_test, y_preds)
+    metrics["classification_report"] = classification_report(y_test, y_preds)
 
-    def f1(y_test, y_preds):
-        model_f1=f1_score(y_test, y_preds)
-        print("F1 score: ", model_f1)
-        metrics["f1"] = model_f1
-
-    def recall(y_test, y_preds):
-        model_recall=recall_score(y_test, y_preds)
-        print("Recall score: ", model_recall)
-        metrics["recall"] = model_recall
-
-    def roc_auc(y_test, y_probs):
-        model_roc_auc=roc_auc_score(y_test, y_probs)
-        print("ROC AUC score: ", model_roc_auc)
-        metrics["roc_auc"] = model_roc_auc
-
-    def confusion_matrix_fn(y_test, y_preds):
-        cf=confusion_matrix(y_test, y_preds);
-        print("Confusion matrix:\n", cf)
-        metrics["confusion_matrix"] = cf
+    # -------------------------------
+    # Print Metrics
+    # -------------------------------
     
-    def classification_report_fn(y_test, y_preds):
-        report=classification_report(y_test, y_preds)
-        print("Classification report:\n", report)
-        metrics["classification_report"] = report
+    print("=" * 40)
+    print("\nModel Performance")
+    print("=" * 40)
 
-    accuracy(y_test, y_preds)
-    precision(y_test, y_preds)
-    f1(y_test, y_preds)
-    recall(y_test, y_preds)
-    roc_auc(y_test, y_probs)
-    confusion_matrix_fn(y_test, y_preds)
-    classification_report_fn(y_test, y_preds)
+    for key in ["accuracy", "precision", "recall", "f1", "roc_auc"]:
+        print(f"{key:<12}: {metrics[key]:.4f}")
 
+    print("\nConfusion Matrix")
+    print(metrics["confusion_matrix"])
+
+    print("\nClassification Report")
+    print(metrics["classification_report"])
+  
     return metrics
+
