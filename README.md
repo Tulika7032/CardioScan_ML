@@ -2,35 +2,27 @@
 
 CardioScan is an **end-to-end machine learning project** that predicts the **likelihood of heart disease using patient clinical data.**
 
-The project demonstrates the **complete ML workflow — from data preprocessing and model training to evaluation and deployment through an interactive Streamlit application.**
+The project demonstrates the **complete ML workflow — from data preprocessing and model optimization to evaluation and through an interactive Streamlit application.**
 
 It focuses on building a practical system for **risk prediction while showcasing core machine learning concepts.**
 
 ---
 
-## Project Overview
+## Features
 
-CardioScan demonstrates the complete **ML lifecycle**:
-- **Data preprocessing and feature preparation**  
-- **Training multiple classification models**
-- **Evaluating models using standard metrics**
-- **Selecting the best-performing model**  
-- **Deploying the model via a Streamlit web application**  
+- End-to-end machine learning workflow
+- Automated data preprocessing
+- Hyperparameter tuning using GridSearchCV
+- Multiple classification models
+- Comprehensive model evaluation
+- Automatic best model selection
+- Interactive Streamlit dashboard
+- Probability-based risk prediction
+- Feature importance visualization
+- Modular project structure
 
 ---
 
-##  Key Highlights
-
-- Built a **modular ML pipeline**
-- **Trained multiple models:**
-  - Random Forest
-  - Logistic Regression
-- **Selected best model using F1-score**
-- **Implemented full evaluation:**
-  - Accuracy, Precision, Recall, F1, ROC-AUC
-- Developed an interactive **Streamlit dashboard**
-  
----
 
 ## Tech Stack
 
@@ -51,11 +43,13 @@ CardioScan demonstrates the complete **ML lifecycle**:
 - **Load dataset**
 - **Split into features and target**
 - **Train-test split (80/20)**
+- **Standardization using `StandardScaler`**
 
 ### 2. Model Training
 **- Pipeline:**
   - **StandardScaler + RandomForest**
   - **StandardScaler + LogisticRegression**
+  - Hyperparameter tuning using **GridSearchCV**
 
 ### 3. Model Evaluation
 **- Metrics:**
@@ -64,6 +58,8 @@ CardioScan demonstrates the complete **ML lifecycle**:
   - **Recall**
   - **F1 Score**
   - **ROC-AUC**
+  - **Confusion Matrix**
+  - **Classification Report**
 
 ### 4. Model Performance
 
@@ -75,6 +71,7 @@ CardioScan demonstrates the complete **ML lifecycle**:
 ### 5. Model Selection
 - Best model selected using **F1-score**
 - **Saved as `model.pkl`**
+- Generated model comparison and evaluation reports
 
 ### 6. Prediction
 - **Load saved model**
@@ -108,7 +105,7 @@ python main.py
 
 ### 5. Run the streamlit app
 ```bash
-streamlit run app.py
+streamlit run app/app.py
 ```
 --- 
 
@@ -117,7 +114,6 @@ streamlit run app.py
 - **Real-time health metrics visualization**  
 - **ML-based heart disease risk prediction**  
 - **Probability-based risk scoring**  
-- **Clean and intuitive Streamlit UI**
 
 ## Note
 This project is inspired by a machine learning course.
